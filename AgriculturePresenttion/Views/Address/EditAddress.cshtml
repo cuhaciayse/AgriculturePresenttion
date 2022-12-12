@@ -1,0 +1,52 @@
+﻿@model EntityLayer.Concrete.Address
+@{
+    ViewData["Title"] = "EditAddress";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Adres Bilgisi Güncelleme Sayfası</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                @Html.HiddenFor(x=>x.AddressID)
+                <label for="exampleInputName1">Açıklama 1</label>
+                <span asp-validation-for="Descrition1" class="text-danger"></span>
+                <input type="text" class="form-control" placeholder="açıklama 1" asp-for="Descrition1">
+                </div>
+                <br />
+
+                <label for="exampleInputName1">Açıklama 2</label>
+                <span asp-validation-for="Descrition2" class="text-danger"></span>
+                <input type="text" class="form-control" placeholder="açıklama 2" asp-for="Descrition2">
+                <br />
+
+                <label for="exampleInputName1">Açıklama 3</label>
+                <span asp-validation-for="Descrition3" class="text-danger"></span>
+                <input type="text" class="form-control" placeholder="açıklama 3" asp-for="Descrition3">
+                <br />
+
+                <label for="exampleInputName1">Açıklama 4</label>
+                <span asp-validation-for="Descrition4" class="text-danger"></span>
+                <input type="text" class="form-control" placeholder="açıklama 4" asp-for="Descrition4">
+                <br />
+
+                <label for="exampleInputName1">Harita Konumu</label>
+                <span asp-validation-for="Mapinfo" class="text-danger"></span>
+                <input type="text" class="form-control" placeholder="Harita Bilgisi" asp-for="Mapinfo">
+                <br />
+
+                <button type="submit" class="btn btn-outline-info">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
